@@ -1,0 +1,71 @@
+pcode	login	offered_by	area	ptitle	desct	stno	co_sup
+prat01	pratyoosh	Pratyoosh Kumar	Analysis	To be decided		1	Nil
+prat07	pratyoosh	Pratyoosh Kumar	Analysis	To be decided		1	Nil
+pati08	pati		"Linear algebra, Graph theory, Combinatorics"		Problem will be selected after discussion with the student.		
+b_bi09	b.bikash	Bikash Bhattacharjya	Graph Theory	To be decided	To be decided	1	
+b_bi010	b.bikash	Bikash Bhattacharjya	Graph Theory	To be decided	To be decided later	1	
+psm0011	psm	Partha Sarathi Mandal	Algorithms	Design Algorithm for Autonomous Robots/UAVs/Agents		1	NIL
+psm0013	psm	Partha Sarathi Mandal	Algorithms	Design Algorithm for Autonomous Robots/UAVs/Agents		1	NIL
+a_sa014	a.saikia	Anupam Saikia	Number Theory	Congruent Numbers	"The project will involve study of congruent numbers, their relation to elliptic curves and a non-technical discussion of recent progress. "	2	
+agan015	aganguly	Ayon Ganguly	Statistics	To be decided	To be decided	2	
+mgpp016	mgpp	M Guru Prem Prasad	Complex Analysis	Study on Analytic Functions	To study the properties of analytic functions and compile the report.  It requires a good knowledge in Complex Analysis (MA201)	2	
+asho018	ashok	Ashok Singh Sairam	Security and Privacy	Privacy in multi-agent systems	"In multi-agent systems, agents (sensors)  make a local observation and communicate the data to a central fusion centre which collates the information. The aim is to protect the privacy of the agent using compression-based privacy techniques."	1	
+asho019	ashok	Ashok Singh Sairam	Network Science	Context-based Personality Identification	"The aim is to obtain behavioural profiling of a person based on a context-specific data corpus, such as OSN data, in a specified time interval."	1	
+asho020	ashok	Ashok Singh Sairam	Wireless Networks	Optimizing energy consumption in mobile-edge computing (MEC) systems	"As the mobile MEC servers are at fixed locations, unmanned aerial vehicles (UAVs) can act as mobile MEC servers, bringing computing closer to the edge of the network. The aim is to minimize the energy consumption in such systems by optimizing the UAV trajectory, etc."	1	
+pala045	palash.ghosh	Palash Ghosh	Statistics and Game Theory	Developing a Statistical Association Measure for Coordination Games	"Summary: This project will develop a statistical association measure for a two-person coordination game. The measure will be validated, and various statistical properties will be explored based on simulated/collected data. 
+
+Requirements: Understanding of probability, statistics, and Monte Carlo methods. Efficient programming skills in R and/or Python. Motivation to learn Statistical Game Theory. 
+
+Outcomes: A journal article. An efficient Shiny app to conduct two-person coordination games that gives a statistical analysis of the game in real-time. "	2	
+pala022	palash.ghosh	Palash Ghosh	Statistics and Machine Learning	Synthetic Data Generation	"SUMMARY: Health data contains much personal, demographic, economic, biological, and medical information. Therefore, sharing data with other stakeholders invites many potential risks. Even though we heard that tons of health data are collected daily in the era of Big-Data, you will hardly find a high-quality individual-level health dataset that can be used for research. The main reason is that companies or institutions fear sharing individual-level health data because of privacy concerns. In this project, we will develop methodologies/algorithms that will generate synthetic data that preserve the statistical properties of the real data but are free from any data privacy issues. 
+
+
+REQUIREMENTS: Efficient programming skills in R and/or Python. Motivation to learn and understand the real issues in health data. You should only take the project if you want to put hard work into the project. 
+
+
+OUTCOMES: A journal article. A software (code) based in R/Python that will generate privacy-preserved synthetic health data. "	2	
+rupa023	rupam	Rupam Barman	Number Theory	To be decided	To be decided	1	
+rupa024	rupam	Rupam Barman	Number Theory	To be decided	To be decided	1	
+shya025	shyamashree	Shyamashree Upadhyay	Representation theory	Root systems	"Root systems are essential for the theory of lie algebras. In this project, we will study root systems."	2	
+cpal026	cpal	Chandan Pal	Control Theory	Markov decision process		2	
+gkd0027	gkd	Gautam K Das	Computer Science	Approximation Algorithms	To be decided later 	2	
+arup030	arupchatt	Arup Chattopadhyay	Functional Analysis	To be decided later	To be decided later	2	NIL
+prat031	pratim	Siddhartha Pratim Chakrabarty	Sustainable Finance	Carbon pricing and carbon derivatives		2	
+prat032	pratim	Siddhartha Pratim Chakrabarty	Risk Management	"Risk management using machine learning for credit, market and operational risk"		2	
+prat033	pratim	Siddhartha Pratim Chakrabarty	Financial Analytics	Financial analytics using cases of public data		2	
+kvsr034	kvsrikanth	KV Srikanth	Complex Analysis	TBA	Reading course on advanced topics	2	
+nate035	natesan	S Natesan	Active/Transfer Learning	Applications of Active/Transfer Learning	Applications of Active/Transfer Learning	2	
+nate036	natesan	S Natesan	Machine Learning	Machine learning techniques for handwriting recognition 	Machine learning techniques for handwriting recognition  	2	
+nate037	natesan	S Natesan	Deep Learning	Deep Learning in Speech Emotion Recognition  	Deep Learning in Speech Emotion Recognition  	2	
+nate038	natesan	S Natesan	Deep Reinforcement Learning 	Deep reinforcement learning for cyber security 	Deep reinforcement learning for cyber security 	2	
+raje042	rajen	Rajen Kumar Sinha	Deep Learning 	To be decided 	Applications of deep learning	2	
+raje040	rajen	Rajen Kumar Sinha	Deep Learning 	To be decided 	Applications of deep learning	2	
+rksr043	rksri	Rajesh K. Srivastava	Analyisis	To be decided 		2	
+kvk0046	kvk	K V Krishna	Graphs and Words	TBD		1	
+kvk0047	kvk	K V Krishna	Automata or Algebra	TBD		1	
+srip048	sriparna	Sriparna Bandopadhyay	Linear Algebra	To be decided later	To be decided later	2	
+swet049	swetatiwari	Sweta Tiwari	Differential Equations		The project involves the study of applications of PDE in the Tomography/image processing in Medical.	2	NIL
+saha050	saha.subhamay	Subhamay Saha	Mathematical Finance	Portfolio optimization under various risk measures		2	
+rame051	ramesh_h	H Ramesh	Complexity Theory	TBD		1	
+rame052	ramesh_h	H Ramesh	Words & Graphs	TBD		1	
+nsel053	nselvaraju	N Selvaraju	Management Science		Stochastic modelling of systems and their analysis with a view to obtain insights for managerial decision making.	2	
+nsel054	nselvaraju	N Selvaraju	Queueing Systems		Queueing modelling and performance analysis of communication networks in a nonstationary framework.	2	
+nsel055	nselvaraju	N Selvaraju	Financial Engineering		Mathematical and empirical analysis of financial/insurance data in connection with certain aspects of finance/insurance.	2	
+bks0056	bks	Bhaba Kumar Sarma	Combinatorial Graph Theory	To be decided		1	
+bks0057	bks	Bhaba Kumar Sarma	Combinatorial Graph Theory	To be decided		1	
+vina058	vinay.wagh	VInay Wagh	Elliptic curve cryptography	Elliptic curve cryptography	Elliptic curve cryptography	1	
+vina059	vinay.wagh	VInay Wagh	Computational group theory	Computational group theory	Exploring various algorithms in Computational group theory using a computer algebra systems GAP.	1	
+anja060	anjankc	Anjan Kumar Chakrabarty	Analysis	To be decided later	"Based on the interest of the student, this will be decided."	1	
+anja061	anjankc	Anjan Kumar Chakrabarty	Analysis	To be decided as per the interest of the student	"Based on the interest of the student, this will be decided."	1	
+bdek062	bdeka	Bhupen Deka	Scientific Computing	To be decided later 	"Based on the interest of the student, this will be decided."	2	
+pass063	passkrishna	Sreekrishna Palaparthi	Topology	Surfaces and Simple Closed Curves	This project will study combinatorial surfaces and curves on them. The goal of the project will be to encode these for a computer so that certain computable quantities related to these curves can be obtained.	2	
+swar065	swaroop	Swaroop Nandan Bora	Differential Equations	Not decided yet	The plan is to be finalized after discussing with the students. It is likely to be related to applications.	2	
+rafi066	rafik	Rafikul Alam	Matrix Analysis	TBA		1	
+rafi067	rafik	Rafikul Alam	Matrix Computations	TBA		1	
+saty068	satyajitp	Satyajit Pramanik	Fluid dynamics	TBD	This project will be related to the topics of hydrodynamic stability analysis. The details of the project will be finalized after discussing with the students. 	1	
+saty069	satyajitp	Satyajit Pramanik	Scientific computing	TBD	"Will be finalised based on interest of the student. A very good understanding of partial differential equations and advanced knowledge of programming languages (e.g., C, C++, MATLAB, Python) are essentials. "	1	
+admi01	sagarmoy	Sagarmoy Dutta	Quantam Computing Complexity Theory			2	
+admi02	shbora	Shreemayee Bora	"Eigenvalue Problems, Spectral Perturbation Theory"			2	
+admi03	jitumath	Jitendriya Swain	Harmonic Analysis			2	
+admi04	durga	Durga Charan Dalal	"Computational Fluid Dynamics, Two-phase Flows"			2	
+admi05	jiten	Jiten Chandra Kalita	"Computational Fluid Dynamics, Numerical methods for Partial Differential Equations, Mathematical Biology"			2	
