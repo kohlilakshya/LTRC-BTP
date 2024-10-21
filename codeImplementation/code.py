@@ -21,7 +21,6 @@ def load_data(file_path):
 
 # Corrected M-spline basis for testing purposes
 def m_spline_basis(t, knots, degree):
-    # Ensure the length of the returned array matches the number of gamma_params
     return np.array([t**i for i in range(degree)])  # 'degree' should match the number of gamma_params
 
 # Define the baseline hazard function h0(t) as a sum of M-splines
@@ -31,8 +30,6 @@ def baseline_hazard(t, gamma_params, knots, degree):
 
 # Define the cumulative hazard function H0(t) as the integral of h0(t)
 def cumulative_hazard(t, gamma_params, knots, degree):
-    # In practice, you would compute the integral of the hazard function
-    # For simplicity, assume cumulative hazard is a linear function
     return np.cumsum(baseline_hazard(t, gamma_params, knots, degree))
 
 # Define the likelihood function for different observation types
@@ -45,14 +42,13 @@ def likelihood(data, gamma_params, beta_params, knots, degree):
         delta = row['death_status']
         nu = 1 if row['age_entry'] > 0 else 0  # Assumption: truncation if age_entry > 0
         
-        # Calculate baseline hazard and cumulative hazard values
         h0_ti = baseline_hazard(ti, gamma_params, knots, degree)
         H0_ti = cumulative_hazard(ti, gamma_params, knots, degree)[-1]  # Use last cumulative value
         H0_li = cumulative_hazard(li, gamma_params, knots, degree)[-1]  # Use last cumulative value
         
-        # Ensure the hazard and cumulative hazard values are not None
-        if h0_ti is None or H0_ti is None or H0_li is None:
-            continue
+        # Ensure the hazard and cumulative hazard values are valid
+        if np.isnan(h0_ti) or np.isnan(H0_ti) or np.isnan(H0_li):
+            return 0  # Return zero likelihood if values are invalid
 
         if nu == 1 and delta == 1:
             likelihood_value *= h0_ti * np.exp(np.dot(beta_params, xi)) * \
@@ -65,6 +61,10 @@ def likelihood(data, gamma_params, beta_params, knots, degree):
         else:
             likelihood_value *= np.exp(-H0_ti * np.exp(np.dot(beta_params, xi)))
 
+        # Prevent extremely small likelihood values
+        if likelihood_value < 1e-300:  # Threshold to avoid underflow
+            return 0
+
     return likelihood_value
 
 # Define the prior distributions
@@ -73,10 +73,14 @@ def prior(gamma_params, beta_params, eta, sigma):
     prior_beta = np.prod([norm(0, sigma).pdf(b) for b in beta_params])
     return prior_gamma * prior_beta
 
-# Define the posterior distribution
+# Define the posterior distribution with checks for invalid values
 def posterior(data, gamma_params, beta_params, eta, sigma, knots, degree):
     likelihood_val = likelihood(data, gamma_params, beta_params, knots, degree)
     prior_val = prior(gamma_params, beta_params, eta, sigma)
+    
+    # Check for zero or NaN values in likelihood and prior
+    if likelihood_val == 0 or np.isnan(likelihood_val) or prior_val == 0 or np.isnan(prior_val):
+        return 0  # If invalid, return zero to avoid division by NaN or zero
     return likelihood_val * prior_val
 
 # Implement the Metropolis-Hastings algorithm for sampling
@@ -92,7 +96,11 @@ def metropolis_hastings(data, initial_gamma, initial_beta, eta, sigma, knots, de
         # Calculate acceptance ratio
         posterior_current = posterior(data, gamma_samples[-1], beta_samples[-1], eta, sigma, knots, degree)
         posterior_proposal = posterior(data, gamma_proposal, beta_proposal, eta, sigma, knots, degree)
-        acceptance_ratio = posterior_proposal / posterior_current
+
+        if posterior_current == 0:  # To avoid division by zero
+            acceptance_ratio = 0
+        else:
+            acceptance_ratio = posterior_proposal / posterior_current
         
         # Accept or reject the proposal
         if np.random.rand() < acceptance_ratio:
