@@ -136,8 +136,10 @@ file_path = './Channing_20House_20data.txt'
 data = load_data(file_path)
 
 # Define initial parameters and hyperparameters
-initial_gamma = np.ones(5)
-initial_beta = np.ones(2)  # Two covariates: age_diff and gender
+initial_gamma = np.random.rand(5)
+
+initial_beta = np.random.rand(2)  # Two covariates: age_diff and gender
+
 knots = np.linspace(min(data['age_entry']), max(data['age_exit']), 5)
 degree = len(initial_gamma)  # Degree matches the number of gamma parameters
 eta = 1.0  # Set eta (hyperparameter for the gamma prior)
